@@ -1,5 +1,11 @@
 This is the personal project of Julian Denzel and Paul Pienkny.
 
+Download it and run:
+
+catkin build
+source devel/setup.bash
+...
+
 Previous GIT Message:
 
 # catkin_ws_denzelbeauty
