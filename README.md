@@ -1,4 +1,8 @@
-# catkin_ws_user
+This is the personal project of Julian Denzel and Paul Pienkny.
+
+Previous GIT Message:
+
+# catkin_ws_denzelbeauty
 
 	catkin config --profile odroid -b odroid-build -d odroid-devel -i odroid-install
 	catkin config --profile odroid --cmake-args  -DCMAKE_TOOLCHAIN_FILE=`pwd`/src/Toolchain-arm-linux-gnueabihf.cmake
