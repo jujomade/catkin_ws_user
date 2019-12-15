@@ -1,0 +1,32 @@
+RosPositioningSystem::RosPositioningSystem(
+    ros::NodeHandle 
+    node_handle, 
+    double frequency,
+    double x, 
+    double error_x,
+    double y, 
+    double error_y,
+    double yaw, 
+    double error_yaw,
+    bool visualize):
+  node_handle_{node_handle},
+  ros_pose_subscriber_{
+    node_handle_.subscribe("ros_core/pose", 16,
+      &amp RosPositioningSystem::RosPoseCallback, this)},
+  ros_pose_publisher_{
+    node_handle_.advertise<geometry_msgs::PoseWithCovarianceStamped>(
+      "/sensors/pose", 16)},
+  frequency_{frequency},
+  random_generator_{},
+  random_distribution_x_{error_x_systematic, error_x_random},
+  random_distribution_y_{error_y_systematic, error_y_random},
+  random_distribution_yaw_{error_yaw_systematic, error_yaw_random},
+  frame_sequence_{0},
+  visualize_{visualize_},
+  visualization_turtle_name_{""}
+{
+  ;
+}
+TurtlePositioningSystem::~TurtlePositioningSystem() {
+  ;
+}
